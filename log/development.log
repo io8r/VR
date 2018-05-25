@@ -333,3 +333,582 @@ Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf5
 
 
 Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-24 02:55:06 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-25 04:39:41 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 121ms (Views: 83.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 04:39:51 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (438.0ms)
+Completed 200 OK in 486ms (Views: 479.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 04:39:51 -0700
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-05-25 04:39:54 -0700
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (179.0ms)
+  Rendered products/new.html.erb within layouts/application (196.8ms)
+Completed 200 OK in 222ms (Views: 220.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-05-25 04:40:03 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dqoJCCnpkrm3dCPDO0kifH7pQtLQ+VFwU1QOadZ+PryyNPvt6o5lsKOhoo5IGlCF1RX0cTvhfRVFaK8ZNev2hA==", "product"=>{"title"=>"", "description"=>"", "image_url"=>"", "price"=>""}, "commit"=>"Create Product"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (7.2ms)
+  Rendered products/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 52ms (Views: 37.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-05-25 04:42:56 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUxeFlw75QBLnxRPbuaJXxZBNd0/E6LOwouRIiMZy0nZ0qzzn1wSCV9KlQIdtfumvb2DftQLjqvUtzBSwIwDcQ==", "product"=>{"title"=>"awd", "description"=>"awd", "image_url"=>"awd", "price"=>"awd"}, "commit"=>"Create Product"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered products/_form.html.erb (5.3ms)
+  Rendered products/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 47ms (Views: 29.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-05-25 04:49:50 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9z2AaCFNbapgqvNHI/xAEEJ0M67k0uGHUJb3t6Q1BjMzo3KN4iqao3R/cgpQrzLp6YiFDQ/KzeJGqlbHR6DOCw==", "product"=>{"title"=>"Exploit 1", "description"=>"awd", "image_url"=>"awd", "price"=>"211"}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/lalkek/Desktop/depot/app/models/product.rb:6: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+...lank: true, format: 	{ with %r{\.(gif|jpg|jpeg|png)\Z}i,
+...                    	          ^
+/home/lalkek/Desktop/depot/app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end
+/home/lalkek/Desktop/depot/app/models/product.rb:7: syntax error, unexpected '}', expecting keyword_end
+													message: 'URL accepts JPG JPEG PNG GIF'}							 }
+													                                        ^):
+  app/models/product.rb:6: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+  app/models/product.rb:6: syntax error, unexpected ',', expecting keyword_end
+  app/models/product.rb:7: syntax error, unexpected '}', expecting keyword_end
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.0ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.1ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.4ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-05-25 04:50:45 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9z2AaCFNbapgqvNHI/xAEEJ0M67k0uGHUJb3t6Q1BjMzo3KN4iqao3R/cgpQrzLp6YiFDQ/KzeJGqlbHR6DOCw==", "product"=>{"title"=>"Exploit 1", "description"=>"awd", "image_url"=>"awd", "price"=>"211"}, "commit"=>"Create Product"}
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/lalkek/Desktop/depot/app/models/product.rb:7: syntax error, unexpected tSTRING_DEND, expecting keyword_end):
+  app/models/product.rb:7: syntax error, unexpected tSTRING_DEND, expecting keyword_end
+  app/controllers/products_controller.rb:27:in `create'
+
+
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.8ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.6ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/lalkek/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (60.9ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9z2AaCFNbapgqvNHI/xAEEJ0M67k0uGHUJb3t6Q1BjMzo3KN4iqao3R/cgpQrzLp6YiFDQ/KzeJGqlbHR6DOCw==", "product"=>{"title"=>"Exploit 1", "description"=>"awd", "image_url"=>"awd", "price"=>"211"}, "commit"=>"Create Product"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."title" = 'Exploit 1' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered products/_form.html.erb (6.2ms)
+  Rendered products/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 167ms (Views: 54.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 04:52:06 -0700
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:11:56 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (357.2ms)
+Completed 200 OK in 434ms (Views: 416.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2018-05-25 08:11:59 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/_form.html.erb (37.0ms)
+  Rendered products/edit.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 92ms (Views: 82.2ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2018-05-25 08:12:18 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BUrClaAUEvlD+BB6C9Rx9g2Y7DqbBgGZgTzf4ZLxE2vB1DBwY3Pl8FctkTd4hwMPpmRamXAeLfyXAH6RcWTbUw==", "product"=>{"title"=>"Exploit 1", "description"=>"<script>alert(1)</script>", "image_url"=>"exp1.png", "price"=>"44.45"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = 'Exploit 1' AND "products"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["description", "<script>alert(1)</script>"], ["updated_at", "2018-05-25 15:12:18.065944"], ["id", 2]]
+  [1m[35m (4.0ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/products/2
+Completed 302 Found in 25ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-05-25 08:12:18 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:12:24 -0700
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-05-25 08:12:34 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2018-05-25 08:12:48 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/_form.html.erb (8.3ms)
+  Rendered products/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2018-05-25 08:12:58 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mfjzJ0Lm/SZ2Im2wny7L2gQpUQEUfBEpIiuXHjQ5IBhdZgHCgYEKL2L37P3sfbkjr9Xnov9kPUw0FzZu16zoIA==", "product"=>{"title"=>"Exploit 1", "description"=>"<p><script>alert(1)</script></p>", "image_url"=>"exp1.png", "price"=>"44.45"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = 'Exploit 1' AND "products"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["description", "<p><script>alert(1)</script></p>"], ["updated_at", "2018-05-25 15:12:58.871598"], ["id", 2]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/products/2
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-05-25 08:12:58 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:13:01 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:13:02 -0700
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2018-05-25 08:13:05 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/_form.html.erb (2.7ms)
+  Rendered products/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2018-05-25 08:13:11 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GxwfX+9XAQS+iY2Tkbj7YRjx0VCUPkTVVu0tEV3n5c/fgu26LDD2DapcDN7i64mYsw1n838maLBA0YxhvnIt9w==", "product"=>{"title"=>"Exploit 1", "description"=>"'<p><script>alert(1)</script></p>'", "image_url"=>"exp1.png", "price"=>"44.45"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."title" = 'Exploit 1' AND "products"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?  [["description", "'<p><script>alert(1)</script></p>'"], ["updated_at", "2018-05-25 15:13:11.312828"], ["id", 2]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/products/2
+Completed 302 Found in 19ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-05-25 08:13:11 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:13:14 -0700
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-05-25 08:13:19 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (0.1ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2018-05-25 08:14:10 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/_form.html.erb (3.9ms)
+  Rendered products/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:14:30 -0700
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:22:21 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:22:21 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:22:28 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:22:28 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:22:28 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:22:28 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:22:29 -0700
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 08:22:57 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:22:58 -0700
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 08:23:52 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 08:23:52 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 08:23:52 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 08:23:52 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 08:23:52 -0700
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2018-05-25 09:06:28 -0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (2.0ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/_form.html.erb (9.2ms)
+  Rendered products/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 58ms (Views: 47.8ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/products/2" for 127.0.0.1 at 2018-05-25 09:06:38 -0700
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QhWVKBXkAqD9FPVwre/Xxb2M+5jCxVnj+KgXefECDpWGi2fN1oP1qenBdD3evKU8FnBNOynddYbulLYJEpfGrQ==", "product"=>{"title"=>"Exploit 1", "description"=>"Come get some baby", "image_url"=>"exp1.png", "price"=>"44.45"}, "commit"=>"Update Product", "id"=>"2"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mProduct Exists (0.6ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."title" = 'Exploit 1' AND "products"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["description", "Come get some baby"], ["updated_at", "2018-05-25 16:06:38.800879"], ["id", 2]]
+  [1m[35m (27.1ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/products/2
+Completed 302 Found in 41ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2018-05-25 09:06:39 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 09:06:42 -0700
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products.self-b0bdaa31af47118231647168697778e4b0414ceb0816ac365a53b6a3e0aaa3a6.css?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/scaffolds.self-635c0d3a20bf3addc793d7e9b6c781733a863b5b4382f22270fdb3934b0a2bbb.css?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/application.self-3a3c8b61bda630ee689740ce7cbd0dd8ea6fdd45e2c42eef4661ab38cf268afe.js?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/exp1-b191e58e1e2326e4712f3b47312c12b3e3440b30ea51317a583bf52e7eb8ea6d.png" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
+
+
+Started GET "/assets/exp2-f6fc247f10336eedd1ca596663ee16860de5c5e5cc6c294dcb1c50cd56316b19.jpg" for 127.0.0.1 at 2018-05-25 09:06:43 -0700
