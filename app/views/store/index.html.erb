@@ -1,7 +1,7 @@
 <h1>Your Catalog</h1>
 
 
-<p><%= Time.now.asctime %></p>
+<p><%= Time.now %></p>
 
 <% cache ['store', Product.latest] do %>
 
