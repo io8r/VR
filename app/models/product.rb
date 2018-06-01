@@ -11,4 +11,8 @@ validates :image_url, allow_blank: true, format: 	{ with: %r{\.(gif|jpg|jpeg|png
 
 validates :title, length: { maximum: 10 } 
 
-end 
+def self.latest
+	Product.order(:updated_at).last
+end
+
+end

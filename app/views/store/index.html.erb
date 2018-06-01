@@ -1,7 +1,13 @@
-
 <h1>Your Catalog</h1>
 
+
+<p><%= Time.now.asctime %></p>
+
+<% cache ['store', Product.latest] do %>
+
 <% @products.each do |product| %>
+
+<% cache ['entry', product] do %>
 	
 	<div class="entry">
 		<%= image_tag(product.image_url) %>
@@ -10,11 +16,12 @@
 		<h2><%= product.description %></h2>
 		
 		<div class="price_line">
-			<span class="price"><h3><%= product.price %></h3></span>
+			<span class="price"><h3><%= number_to_currency(product.price) %></h3></span>
 		</div>
 	</div>
-
+<% end %>
 <% end %>
 
+<% end %>
 
 
