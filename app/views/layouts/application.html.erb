@@ -2,32 +2,39 @@
 <html>
 <head>
   <title>Exploit Store</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 
 <body class='<%= controller.controller_name %>'>
+	
 	<div id="banner">
 		<%= image_tag("logo.png")%>
-		<%= @page_title || "Purchase it on your own risk only"%>
+		<%= @page_title || "Purchase it on your own risk only" %>
 	</div>
 
 	<div id="columns">
 		
 		<div id="side">
+			<div id="cart">
+				<%= render @cart %>
+			</div>
+			
 			<ul>
-					<li><a href="http://www....">Home</a></li>
-					<li><a href="http://www..../faq">FAQ</a></li>
-					<li><a href="http://www..../news">News</a></li>
-					<li><a href="http://www..../contacts">Contacts</a></li>
+			<li><a href="http://www....">Home</a></li>
+			<li><a href="http://www..../faq">Questions</a></li>
+			<li><a href="http://www..../news">News</a></li>
+			<li><a href="http://www..../contact">Contact</a></li>
 			</ul>
-		</div>
+			
+			</div>
 
-		<div id="main">
-			<%= yield %>
-		</div>
-	</div>
+	<div id="main">
+		<%= yield %>
+	</div>	
+	
+</div>
 
 
 </body>
