@@ -1,4 +1,6 @@
-<h2>Your Cart</h2>
+<% unless cart.line_items.empty? %>
+
+<div class ="cart_title">Your Cart</div>
 
 <table>
 	
@@ -14,3 +16,5 @@
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', store_path %>
+
+<% end %>
