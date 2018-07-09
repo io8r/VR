@@ -4,16 +4,11 @@ class ProductTest < ActiveSupport::TestCase
   
 	fixtures :products
 
-  #here are some methods, needed for tests below
-
-  #method for test "image url"
   def new_product(image_url)
   	
   	Product.new(title: "r", description: "r", price: 1, image_url: image_url)
   
   end
-
-	# here are the tests
 
 	test "image url" do
 	
@@ -46,19 +41,12 @@ class ProductTest < ActiveSupport::TestCase
   	
   	product = Product.new(title: "Book Title", description: "yyy", image_url: "123.jpg")
 
-  	#specially made failure
   	product.price = -1
   	assert product.invalid?
-  	assert_equal ["must be greater then or equal to 0.01"],
-  	product.errors[:price]
-  	
+  	  	
   	product.price = 0
   	assert product.invalid?
-
-  	assert_equal ["must be greater then or equal to 0.01"],
-  	product.price = 1
-  	assert product.valid?
-
+  	
   end
   
   test "product is not valid if it has not unique title" do
@@ -68,7 +56,5 @@ class ProductTest < ActiveSupport::TestCase
   	assert_equal ["has already been taken"], product.errors[:title]
 
   end
-
-
 
 end

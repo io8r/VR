@@ -1,0 +1,10 @@
+<h3>Your order sent</h3>
+
+<p>
+  It informs you about your recent order:
+</p>
+
+<table>
+	<tr><th colspan="2">Amount</th><th>Description</th></tr>
+	<%= render @order.line_items -%>
+</table>
